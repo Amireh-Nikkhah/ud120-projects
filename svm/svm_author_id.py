@@ -20,11 +20,12 @@ from email_preprocess import preprocess
 features_train, features_test, labels_train, labels_test = preprocess()
 
 
-
+from scikit-learn import SVM
 
 #########################################################
-### your code goes here ###
-
+csf=SVM(kernel="liner")
+csf.fit(features_train, features_test)
+pred=csf.predict(labels_train)
 #########################################################
 
 
